@@ -15,7 +15,7 @@ const port = process.env.PORT || 3002;
 app.use(cors());
 
 app.use(express.json());
-app.use("/", participationRoutes);
+app.use("/participants", participationRoutes);
 
 connectDB().then(() => {
     app.listen(port, () => {
