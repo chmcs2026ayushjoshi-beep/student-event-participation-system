@@ -30,11 +30,15 @@ const HomePage = () => {
     fetchParticipations();
   }, []);
 
-      const filteredParticipations = participations.filter((p) => {
+  const filteredParticipations = participations.filter((p) => {
 
-      const departmentMatch = departmentFilter === "" || p.department === departmentFilter;
+  const departmentMatch =
+    departmentFilter === "" ||
+    p.department.toLowerCase() === departmentFilter.toLowerCase();
 
-      const categoryMatch = categoryFilter === "" || p.eventCategory === categoryFilter;
+  const categoryMatch =
+    categoryFilter === "" ||
+    p.eventCategory.toLowerCase() === categoryFilter.toLowerCase();
 
   return departmentMatch && categoryMatch;
 
