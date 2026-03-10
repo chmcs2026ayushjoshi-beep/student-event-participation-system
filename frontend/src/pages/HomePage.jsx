@@ -63,9 +63,9 @@ const HomePage = () => {
         value={departmentFilter}
         onChange={(e)=>setDepartmentFilter(e.target.value)}>
         <option value="">All Departments</option>
-        <option value="IT">IT</option>
+        <option value="Information Technology">Information Technology</option>
         <option value="Computer Science">Computer Science</option>
-        <option value="BCOM">BCOM</option>
+        <option value="Bachelor of Commerce">Bachelor of Commerce</option>
         </select>
 
         <select
