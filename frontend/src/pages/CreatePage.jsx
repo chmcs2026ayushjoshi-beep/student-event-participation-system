@@ -101,18 +101,20 @@ const fullDepartment = departmentMap[department] || department;
                   />
                 </div>
 
-                <div className='form-control mb-4 w-full'>
-                  <label className='label'>
-                    <span className='label-text'>Department</span>
-                  </label>
-                  <input
-                    type='text'
-                    className='input input-bordered w-full'
-                    value={department}
-                    onChange={(e) => setDepartment(e.target.value)}
-                    required
-                  />
-                </div>
+                <div className='form-control mb-4'>
+                <label className='label'>
+                <span className='label-text'>Department</span>
+                </label>
+
+                <select className='select select-bordered w-full' value={department} onChange={(e)=>setDepartment(e.target.value)} required>
+
+    <option value="">Select Department</option>
+    <option value="Information Technology">Information Technology</option>
+    <option value="Computer Science">Computer Science</option>
+    <option value="Bachelor of Commerce">Bachelor of Commerce</option>
+
+  </select>
+</div>
 
                 <div className='form-control mb-4 w-full'>
                   <label className='label'>
