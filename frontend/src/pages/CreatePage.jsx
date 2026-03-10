@@ -24,6 +24,13 @@ const CreatePage = () => {
     setLoading(true);
 
     try {
+      const departmentMap = {
+        IT: "Information Technology",
+        BCOM: "Bachelor of Commerce",
+        CS: "Computer Science"
+      };
+
+const fullDepartment = departmentMap[department] || department;
 
       await api.post('/', {
         studentName,
